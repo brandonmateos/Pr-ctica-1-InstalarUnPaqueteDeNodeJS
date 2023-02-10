@@ -19,3 +19,5 @@ greetMe();
 
 logGreeting(greetMe);
 //function are first class, pass it as a parameter
+
+
