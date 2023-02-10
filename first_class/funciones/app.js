@@ -1,4 +1,4 @@
-function greet(){
+/*function greet(){
     console.log('Hello');
 }
 greet();//invoke the function
@@ -19,5 +19,28 @@ greetMe();
 
 logGreeting(greetMe);
 //function are first class, pass it as a parameter
+*/
+
+//        parametros
+//          |
+//nombre    |        cuerpo
+//funcion   |         |
+//    |     |         |
+//    \/    \/        \/
+let greet = () => console.log('Hello');
+greet();
+
+/*
+si es solo un parametro se puede poner sin parentesis, 
+si es mas de uno o no hay, son necesarios los parentesis
+                   |
+                   \/        */
+let logGreeting = fn => fn();
+logGreeting(greet);
+
+let greetMe = () => console.log('Hello from the function expression');
+greetMe();
+
+logGreeting(greetMe);
 
 
