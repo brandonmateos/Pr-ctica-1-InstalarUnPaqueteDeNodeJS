@@ -1,31 +1,16 @@
-//inyectamos la dependecia
-// var Emitter = require('./emitter');
-var Emitter = require('events');
-var config = require('./config');
-var emtr = new Emitter();
 
-//creamos un nuevo objeto
-/*emtr.on('greet', () => {
-    console.log('Somewhere, someone said hello.');
-});*/
-emtr.on(config.events.GREET, () => {
-    console.log('Somewhere, someone said hello.');
-});
+const express = require('express')
+const app = express()
 
-emtr.on(config.events.GREET, () => {
-    console.log('A greeting occurred!');
-});
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+//Puerto por defecto: 3000
+app.listen(3000)
 
-console.log('Hello!');
-emtr.emit('greet');
-
-//creamos un nuevo objeto
-emtr.on(config.events.JUMP, () => {
-    console.log('Someone jumped!');
-});
-
-
-//Los eventos se pueden emitir
-console.log (emtr);
-emtr.emit('jump');
-//____________________________________________________________
+/*Notas:
+1. Para ejecutar el servidor, en la consola de comandos, nos situamos en la carpeta 
+donde se encuentra el archivo app.js y ejecutamos el comando node app.js
+2. Para probar el servidor, abrimos un navegador y escribimos la dirección http://localhost:3000
+3. Para detener el servidor, pulsamos Ctrl+C
+*/
