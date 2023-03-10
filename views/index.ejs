@@ -3,6 +3,18 @@
         <link href="assets/style.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <% if (isEven) { %>
+            <p>El número <%= number %> es par</p>
+          <% } else { %>
+            <p>El número <%= number %> es impar</p>
+          <% } %>
+      
+          <ul>
+            <% elements.forEach(function(element) { %>
+              <li><%= element %></li>
+            <% }); %>
+          </ul>
+
+        
     </body>
 </html>
