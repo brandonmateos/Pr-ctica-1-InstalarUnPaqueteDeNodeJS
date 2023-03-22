@@ -1,0 +1,49 @@
+<html>
+    <head> 
+      <meta charset="utf-8">
+      <meta http-equipt="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="/assets/stylePerson.css" type="text/css" />
+      <title>Document</title>
+    </head>
+    <body>
+<!--Aqui se esta especificando entre los 
+    caracteres <%= %> que esa vista va a 
+    recibir un valor especial, llamado ID
+    y ese ID va a ser “pasado” a la vista
+    mediante el “route handler”-->
+    <h1>Person: <%= ID %></h1>
+    <h2>Mensaje: <%= MENSAGGE %></h2>
+    
+      <ul>
+        <!--
+          se crea un switch para validar el mensaje
+          y repetirlo n veces
+        -->
+        <% switch (MENSAGGE) {
+          case "Hola":
+            for(var i = 0; i < TIME; i++){ %>
+            <p><%= MENSAGGE %> <%= ID %></p>
+            <% }
+           break; %>
+          <% case "Adios":
+            for(var i = 0; i < TIME; i++){ %>
+            <p><%= MENSAGGE %> <%= ID %></p>
+            <% }
+            break; %>
+          <% case "Bienvenido":
+            for(var i = 0; i < TIME; i++){ %>
+            <p><%= MENSAGGE %> <%= ID %></p>
+            <% }
+            break; %>  
+            <!--
+              si el mensaje no es valido
+              se mostrara un mensaje de error
+             -->
+          <% default: %>
+            <h3>El mensaje no es valido</h3>
+            <h3>Mensajes validos (Hola, Adios, Bienvenido)</h3>
+          <% } %>
+      </ul>
+    </body>
+</html>
