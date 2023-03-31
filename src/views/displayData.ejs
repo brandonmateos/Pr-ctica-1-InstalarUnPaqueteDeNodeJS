@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+
+  <title>Agregar estudiante</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <!-- muestra los datos del body -->
+    <div class="card">
+      <div>
+        <h4>Nombre:</h4>
+        <p><%= nombre %></p> <!-- <%= nombre %> es una variable que se envia desde el controlador -->
+      </div>
+      <div>
+        <h4>NSS:</h4>
+        <p><%= nss %></p>
+      </div>
+      <div>
+        <h4>Edad:</h4>
+        <p><%= edad %></p>
+      </div>
+      <div>
+        <h4>Tipo De Sangre:</h4>
+        <p><%= tipoSangre %></p>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

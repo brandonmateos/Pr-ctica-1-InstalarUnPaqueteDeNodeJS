@@ -6,7 +6,7 @@ let router = express.Router();
 
 //le pegamos las rutas al router
 router.get('/person', (req, res) => {
-    res.send('has solicitado el listado de personas');
+    res.render('person');
 })
 
 //exportamos el router
