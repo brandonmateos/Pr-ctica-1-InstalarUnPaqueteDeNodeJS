@@ -27,5 +27,5 @@ app.use('/assets', express.static(path.join(__dirname, '/public')));
 
 //levantamos el servidor local
 app.listen(PORT, () => {
-    console.log(`escuchando en el purto ${PORT}`)
+    console.log(`escuchando en el purto ${PORT} [http://localhost:${PORT}]`)
 })
