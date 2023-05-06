@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/litera/bootstrap.min.css"
+      media="screen"
+    />
+    <title>Personas</title>
+  </head>
+  <body>
+    <div class="container" style="margin: 0px auto">
+      <header style="text-align: center" class="card-header">
+        <h1>Personas</h1>
+      </header>
+      <main>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>NSS</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Tipo de Sangre</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < Persons.length; i++) { %>
+            <tr>
+              <td><%= Persons[i].nss %></td>
+              <td><%= Persons[i].nombre %></td>
+              <td><%= Persons[i].edad %></td>
+              <td><%= Persons[i].tipoSangre %></td>
+              <td><a href="">Delete</a></td>
+              <td><a href="">Update</a></td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+        <footer style="text-align: center">
+          <a href="./addPerson" class="btn btn-primary">Agregar</a>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

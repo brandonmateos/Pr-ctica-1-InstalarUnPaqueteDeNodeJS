@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inventario</title>
+  <link
+    rel="stylesheet"
+    href="https://bootswatch.com/4/litera/bootstrap.min.css"
+  />
+  <body>
+    <div class="container" style="margin: 0px auto">
+      <header style="text-align: center" class="card-header">
+        <h1>Agregar Estudiante</h1>
+      </header>
+      <form action="/addPerson" method="POST">
+
+        <div class="form-group">
+            <input type="text" name="nss" id="nss" class="form-control" placeholder="NSS" />
+        </div>
+       
+        <div class="form-group">
+          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"  />
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="edad" id="edad" class="form-control" placeholder="Edad"  />
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="tipoSangre" id="tipoSangre" class="form-control" placeholder="Tipo de Sangre"  />
+        </div>
+
+        <button type="submit" value="Submit" class="btn btn-primary btn-block">
+          Submit
+        </button>
+        
+      </form>
+    </div>
+  </body>
+</html>
