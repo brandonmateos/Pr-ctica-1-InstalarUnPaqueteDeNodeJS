@@ -35,8 +35,8 @@
               <td><%= Persons[i].nombre %></td>
               <td><%= Persons[i].edad %></td>
               <td><%= Persons[i].tipoSangre %></td>
-              <td><a href="">Delete</a></td>
-              <td><a href="">Update</a></td>
+              <td><a href="<%= `deletePerson/${Persons[i]._id}` %>">Delete</a></td>
+              <td><a href="<%= `findById/${Persons[i]._id}` %>">Update</a></td>
             </tr>
             <% } %>
           </tbody>

@@ -3,7 +3,6 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inventario</title>
   <link
     rel="stylesheet"
     href="https://bootswatch.com/4/litera/bootstrap.min.css"
@@ -16,19 +15,23 @@
       <form action="/addPerson" method="POST">
 
         <div class="form-group">
-            <input type="text" name="nss" id="nss" class="form-control" placeholder="NSS" />
+          <label for="nss">NSS</label>
+            <input type="text" name="nss" id="nss" class="form-control" placeholder="A234SD...." />
         </div>
        
         <div class="form-group">
-          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre"  />
+          <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Juan...."  />
         </div>
 
         <div class="form-group">
-          <input type="text" name="edad" id="edad" class="form-control" placeholder="Edad"  />
+          <label for="edad">Edad</label>
+          <input type="text" name="edad" id="edad" class="form-control" placeholder="13...."  />
         </div>
 
         <div class="form-group">
-          <input type="text" name="tipoSangre" id="tipoSangre" class="form-control" placeholder="Tipo de Sangre"  />
+          <label for="tipoSangre">Tipo de Sangre</label>
+          <input type="text" name="tipoSangre" id="tipoSangre" class="form-control" placeholder="O+, O- ...."  />
         </div>
 
         <button type="submit" value="Submit" class="btn btn-primary btn-block">

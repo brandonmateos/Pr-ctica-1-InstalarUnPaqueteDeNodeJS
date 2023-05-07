@@ -33,4 +33,39 @@ router.post('/addPerson', (req, res) => {
     .catch((error) => {res.json({message: error})});
 });
 
+/*
+    Aquin invocamos al metodo findById que
+    regresa una promesa con dos caminos posibles
+    En caso de éxito, el documento encontrado 
+    queda en myPerson y este es enviado como
+    parámetro al endpoint que renderiza la vista
+    personUpdate que permite editar el documento
+
+*/
+router.get('/findById/:id', (req, res) => {
+    Person.findById(req.params.id)
+    .then((myPerson) => {res.render('personUpdate', {myPerson})})
+    .catch((error) => {res.json({message: error})});
+});
+
+/*
+Si todo sale bien, redireccionamos a nuestra vista 
+principal que muestra todos los documentos de la 
+colección, incluido el documento recién editado, 
+de lo contrario, mostraremos un mensaje de error 
+en formato JSON
+ */
+router.post('/updatePerson', (req, res) => {
+    Person.findByIdAndUpdate(req.body.objId,
+        {
+            nombre: req.body.nombre,
+            edad: req.body.edad,
+            tipoSangre: req.body.tipoSangre,
+            nss: req.body.nss
+        })
+    .then((data) => {res.redirect('/gente')})
+    .catch((error) => {res.json({message: error})});
+});
+
+
 module.exports = router;
