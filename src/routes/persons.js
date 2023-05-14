@@ -67,5 +67,18 @@ router.post('/updatePerson', (req, res) => {
     .catch((error) => {res.json({message: error})});
 });
 
+router.get('/confirmDelete/:id', (req, res) => {
+    Person.findById(req.params.id)
+    .then((data) => {res.render('confirmDelete', {data})})
+    .catch((error) => {res.json({message: error})});
+ });
+  
+
+router.get('/deletePerson/:id', (req, res) => {
+   Person.findByIdAndDelete(req.params.id)
+   .then((data) => {res.redirect('/gente')})
+   .catch((error) => {res.json({message: error})});
+});
+
 
 module.exports = router;
