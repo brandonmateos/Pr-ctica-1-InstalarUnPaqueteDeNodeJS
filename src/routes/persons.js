@@ -80,5 +80,16 @@ router.get('/deletePerson/:id', (req, res) => {
    .catch((error) => {res.json({message: error})});
 });
 
+/*
+Realizar busqueda por nombre 
+find es un metodo de mongoose que recibe como parametro
+*/
+
+router.post('/search', (req, res) => {
+    Person.find({nombre: {$regex: req.body.search, $options: 'i'}})
+    .then((Persons) => {res.render('persons', {Persons})})
+    .catch((error) => {res.json({message: error})});
+});
+
 
 module.exports = router;

@@ -12,10 +12,17 @@
     <title>Personas</title>
   </head>
   <body>
+  
     <div class="container" style="margin: 0px auto">
+      
+
       <header style="text-align: center" class="card-header">
         <h1>Personas</h1>
       </header>
+      <form class="d-flex" action="search" method="POST">
+        <input class="form-control me-sm-2" type="search" name="search" id="search" placeholder="Buscar">
+        <button class="btn btn-secondary my-2 my-sm-0" href="./search" type="submit">Buscar</button>
+      </form>
       <main>
         <table class="table table-striped">
           <thead>
@@ -38,15 +45,15 @@
  
               <td>
                 <a href="<%= `confirmDelete/${Persons[i]._id}` %>"
-                   onclick="return confirm('¿Está seguro de que desea eliminar esta persona?')">Delete</a>
+                   onclick="return confirm('¿Está seguro de que desea eliminar esta persona?')" class="btn btn-danger" >Delete</a>
               </td>
-              <td><a href="<%= `findById/${Persons[i]._id}` %>">Update</a></td>
+              <td><a href="<%= `findById/${Persons[i]._id}` %>" class="btn btn-warning" >Update</a></td>
             </tr>
             <% } %>
           </tbody>
         </table>
         <footer style="text-align: center">
-          <a href="./addPerson" class="btn btn-primary">Agregar</a>
+          <a href="./addPerson" class="btn btn-success">Agregar</a>
         </footer>
       </main>
       
